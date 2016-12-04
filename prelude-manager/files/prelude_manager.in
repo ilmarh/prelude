@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# PROVIDE: prelude_manager
+# REQUIRE: DAEMON%%MYSQL%%%%PGSQL%%
+#
+# Add the following lines to /etc/rc.conf to enable prelude-manager:
+# prelude_manager_enable (bool):	Set to YES to enable prelude-manager
+# 				Default: NO
+# prelude_manager_flags (str):		Extra flags passed to prelude-manager
+#				Default: -D
+# prelude_manager_conf (str):		Prelude-Manager configuration file
+#				Default: %%PREFIX%%/etc/prelude-manager/prelude-manager.conf
+#
+# USAGE: prelude_manager [-options]
+
+. /etc/rc.subr
+
+name="prelude_manager"
+rcvar=prelude_manager_enable
+
+load_rc_config $name
+
+# set some defaults
+: ${prelude_manager_enable="NO"}
+: ${prelude_manager_conf="%%PREFIX%%/etc/prelude-manager/prelude-manager.conf"}
+: ${prelude_manager_flags="--config ${prelude_manager_conf} -d"}
+
+command="%%PREFIX%%/bin/prelude-manager"
+command_args=""
+
+run_rc_command "$1"

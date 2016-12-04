@@ -1,0 +1,11 @@
+bin/prelude-lml
+%%ETCDIR%%/plugins.rules
+%%ETCDIR%%/prelude-lml.conf
+include/prelude-lml/prelude-lml.h
+lib/prelude-lml/debug.la
+lib/prelude-lml/debug.so
+lib/prelude-lml/pcre.la
+lib/prelude-lml/pcre.so
+@dir /var/lib/prelude-lml
+@dir /var/lib
+@dir /var/run/prelude-lml

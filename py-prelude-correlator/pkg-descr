@@ -1,0 +1,4 @@
+
+Prelude-Correlator allows conducting multistream correlations thanks to a powerful programming language for writing correlation rules. Prelude-Correlator is a Python rules based correlation engine. It has the ability to connect and fetch alerts from a remote Prelude-Manager server, and correlate incoming alerts based on the provided ruleset. Upon successful correlation, IDMEF correlation alerts are raised.
+
+https://www.prelude-siem.org/projects/prelude/wiki/PreludeCorrelator

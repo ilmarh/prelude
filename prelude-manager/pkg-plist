@@ -1,0 +1,26 @@
+bin/prelude-manager
+%%ETCDIR%%/prelude-manager.conf
+include/prelude-manager/prelude-manager.h
+lib/prelude-manager/decodes/normalize.la
+lib/prelude-manager/decodes/normalize.so
+lib/prelude-manager/filters/idmef-criteria.la
+lib/prelude-manager/filters/idmef-criteria.so
+lib/prelude-manager/filters/thresholding.la
+lib/prelude-manager/filters/thresholding.so
+lib/prelude-manager/reports/db.la
+lib/prelude-manager/reports/db.so
+lib/prelude-manager/reports/debug.la
+lib/prelude-manager/reports/debug.so
+lib/prelude-manager/reports/smtp.la
+lib/prelude-manager/reports/smtp.so
+lib/prelude-manager/reports/textmod.la
+lib/prelude-manager/reports/textmod.so
+lib/prelude-manager/reports/xmlmod.la
+lib/prelude-manager/reports/xmlmod.so
+man/man1/prelude-manager.1.gz
+%%PORTDOCS%%%%DOCSDIR%%/smtp/template.example
+%%DATADIR%%/xmlmod/idmef-message.dtd
+@dir /var/run/prelude-manager
+@dir /var/spool/prelude-manager/failover
+@dir /var/spool/prelude-manager/scheduler
+@dir /var/spool/prelude-manager

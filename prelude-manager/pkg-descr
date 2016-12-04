@@ -1,0 +1,6 @@
+
+Prelude-Manager is a high availability server that accepts secured connections from distributed sensors and/or other Managers and saves received alerts to a media specified by the user (database, log file, mail etc.). The server schedules and establishes the priorities of treatment according to the critical character and the source of the alerts.
+The Prelude Manager is a concentrator capable of handling large number of connections, and processing large amounts of alerts. It uses a per client scheduling queues in order to process alerts by severity fairly across clients.
+The Prelude Manager comes with multiple plugins like filtering plugins (idmef-criteria, thresholding, etc.) or reporting plugins like the SMTP plugin which automatically sends emails containing a textual description of alerts to a configured list of recipients.
+
+https://www.prelude-siem.org/projects/prelude/wiki/PreludeManager

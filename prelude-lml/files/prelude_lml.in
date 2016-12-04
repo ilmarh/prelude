@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# PROVIDE: prelude_lml
+# REQUIRE: DAEMON%%MYSQL%%%%PGSQL%% 
+#
+# Add the following lines to /etc/rc.conf to enable prelude-lml:
+# prelude_lml_enable (bool):	Set to YES to enable prelude-lml
+# 				Default: NO
+# prelude_lml_flags (str):		Extra flags passed to prelude-lml
+#				Default: -D
+# prelude_lml_conf (str):		Prelude-LML configuration file
+#				Default: %%PREFIX%%/etc/prelude-lml/prelude-lml.conf
+#
+# USAGE: prelude-lml [-options]
+
+. /etc/rc.subr
+
+name="prelude_lml"
+rcvar=prelude_lml_enable
+
+load_rc_config $name
+
+# set some defaults
+: ${prelude_lml_enable="NO"}
+: ${prelude_lml_conf="%%PREFIX%%/etc/prelude-lml/prelude-lml.conf"}
+: ${prelude_lml_flags=""}
+
+command="%%PREFIX%%/bin/prelude-lml"
+command_args="-c ${prelude_lml_conf} -d"
+
+run_rc_command "$1"
